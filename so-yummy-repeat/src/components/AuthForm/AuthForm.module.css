@@ -1,0 +1,43 @@
+.boxAuth {
+  height: 100vh;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.overWall {
+}
+.ss {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 70vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  padding: 20px;
+
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+.linkForm {
+  font-family: Poppins;
+  font-size: 14px;
+ 
+  color: #fafafa;
+  text-decoration: underline;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+}

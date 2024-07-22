@@ -54,7 +54,7 @@ const WelcomePage = () => {
             Registration
           </LinkRegister>
 
-          <LinkLogin to="/login" className="button">
+          <LinkLogin to="/signin" className="button">
             Sign in
           </LinkLogin>
         </BoxLink>

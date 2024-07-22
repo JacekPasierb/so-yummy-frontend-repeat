@@ -1,19 +1,33 @@
-import { useLocation } from "react-router-dom";
-import { StyledLink } from "./AuthForm.styled";
+import css from "./AuthForm.module.css";
 
-const AuthForm = () => {
+import React, { FC, Suspense, lazy } from "react";
+import { Link, useLocation } from "react-router-dom";
+import RegisterForm from "../Form/RegisterForm";
+import SigninForm from "../Form/SigninForm";
+
+
+
+const AuthForm: FC = () => {
   const location = useLocation();
   const { pathname } = location;
+
   return (
     <>
       {pathname === "/register" && (
         <>
-          <StyledLink to="/login">Sign in</StyledLink>
+          <Suspense fallback={<div>Loading...</div>}></Suspense>
+          <RegisterForm />
+          <Link className={css.linkForm} to="/signin">
+            Sign in
+          </Link>
         </>
       )}
-      {pathname === "/login" && (
+      {pathname === "/signin" && (
         <>
-          <StyledLink to="/register">Registration</StyledLink>
+          <Suspense fallback={<div>Loading...</div>}></Suspense> <SigninForm />
+          <Link className={css.linkForm} to="/register">
+            Registration
+          </Link>
         </>
       )}
     </>
